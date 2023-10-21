@@ -1,20 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.infowithvijay.triviaquizapp2"
         minSdkVersion 25
-        targetSdkVersion 31
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        dataBinding {
-            enabled  true
-        }
-    }
-    buildFeatures {
-        viewBinding true
-        dataBinding true
     }
     buildTypes {
         release {
@@ -22,8 +16,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
-        }
     }
+
+}
 
 
 
@@ -36,5 +31,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation "androidx.preference:preference:1.1.0"
-    implementation ("com.airbnb.android:lottie:6.1.0")
+
+
 }
